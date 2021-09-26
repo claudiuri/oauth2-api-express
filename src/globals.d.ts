@@ -8,3 +8,11 @@ module "@cubos/inject" {
     entityManager: EntityManager;
   }
 }
+
+declare global {
+  declare namespace Express {
+    export interface Request {
+      userId: string;
+    }
+  }
+}
