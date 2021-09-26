@@ -14,9 +14,9 @@ export class User {
   @Column({ type: "text", nullable: false })
   password!: string;
 
-  @CreateDateColumn({ type: "date" })
+  @CreateDateColumn({ type: "timestamp" })
   createdAt!: Date;
 
-  @UpdateDateColumn({ type: "date" })
+  @UpdateDateColumn({ type: "timestamp" })
   updatedAt!: Date;
 }

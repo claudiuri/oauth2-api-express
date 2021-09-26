@@ -17,9 +17,9 @@ export class Client {
   @Column({ type: "text", nullable: false })
   grants!: string;
 
-  @CreateDateColumn({ type: "date" })
+  @CreateDateColumn({ type: "timestamp" })
   createdAt!: Date;
 
-  @UpdateDateColumn({ type: "date" })
+  @UpdateDateColumn({ type: "timestamp" })
   updatedAt!: Date;
 }

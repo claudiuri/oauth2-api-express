@@ -11,7 +11,7 @@ export class AuthorizationCode {
   @Column({ type: "text", nullable: false })
   authorizationCode!: string;
 
-  @Column({ type: "date", nullable: false })
+  @Column({ type: "timestamp", nullable: false })
   expiresAt!: Date;
 
   @Column({ type: "text", nullable: false })
@@ -23,9 +23,9 @@ export class AuthorizationCode {
   @ManyToOne(() => User, user => user.id)
   user!: User;
 
-  @CreateDateColumn({ type: "date" })
+  @CreateDateColumn({ type: "timestamp" })
   createdAt!: Date;
 
-  @UpdateDateColumn({ type: "date" })
+  @UpdateDateColumn({ type: "timestamp" })
   updatedAt!: Date;
 }

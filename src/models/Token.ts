@@ -11,7 +11,7 @@ export class Token {
   @Column({ type: "text", nullable: false })
   accessToken!: string;
 
-  @Column({ type: "text", nullable: false })
+  @Column({ type: "timestamp", nullable: false })
   accessTokenExpiresAt!: Date;
 
   @ManyToOne(() => Client, client => client.id)
@@ -20,9 +20,9 @@ export class Token {
   @ManyToOne(() => User, user => user.id)
   user!: User;
 
-  @CreateDateColumn({ type: "date" })
+  @CreateDateColumn({ type: "timestamp" })
   createdAt!: Date;
 
-  @UpdateDateColumn({ type: "date" })
+  @UpdateDateColumn({ type: "timestamp" })
   updatedAt!: Date;
 }
